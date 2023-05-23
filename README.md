@@ -56,8 +56,8 @@ TCP ではなく UDP を使用する場合は下記の箇所を修正する。
 - nginx.conf
 
 ```diff
-- # listen ${NGINX_LISTEN_PORT} udp;
-+ # listen ${NGINX_LISTEN_PORT};
+- listen ${NGINX_LISTEN_PORT} udp;
++ listen ${NGINX_LISTEN_PORT};
 ```
 
 - docker-compose.yml
