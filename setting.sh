@@ -3,20 +3,21 @@
 #ENV
 
 #ip
-export SERVER1="<IP>"
+export SERVER1="192.168.0.50"
 # export SERVER2="<IP>"
 # export SERVER3="<IP>"
 
 #port
-export PORT="<PORT>"
+export PORT="9987"
 
 #NGINX version(dockertag)
 export NGINX_VERSION="1.23"
+
 #NGINX LISTEN PORT
-export NGINX_LISTEN_PORT={nginx listen port number}
+export NGINX_LISTEN_PORT="9987"
+
 
 #create config
-
 # Dockerfile
 cat > Dockerfile <<EOF
 FROM nginx:${NGINX_VERSION}
@@ -32,7 +33,7 @@ services:
   nginx:
     build: .
     ports:
-      - "{PORT}:{NGINX_LISTE_PORT}/udp"
+      - "${PORT}:${NGINX_LISTEN_PORT}/udp"
     volumes:
       - ./deny.conf:/etc/nginx/deny.conf
       - ./nginx.conf:/etc/nginx/nginx.conf
