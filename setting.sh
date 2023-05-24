@@ -3,18 +3,18 @@
 #ENV
 
 #ip
-export SERVER1="192.168.0.50"
+export SERVER1="<IP>"
 # export SERVER2="<IP>"
 # export SERVER3="<IP>"
 
 #port
-export PORT="9987"
+export PORT="<PORT>"
 
 #NGINX version(dockertag)
-export NGINX_VERSION="1.23"
+export NGINX_VERSION="<nginx version>"
 
 #NGINX LISTEN PORT
-export NGINX_LISTEN_PORT="9987"
+export NGINX_LISTEN_PORT="<nginx listen port>"
 
 
 #create config
